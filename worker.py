@@ -11,7 +11,7 @@ def get_api_key() -> str:
         return secret
     else:
         #local testing
-        with open('.key') as f:
+        with open('file.key') as f:
             return f.read()
       
 @app.route("/")
