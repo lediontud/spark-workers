@@ -12,7 +12,7 @@ def get_api_key() -> str:
     else:
         #local testing
         with open('.key') as f:
-            return f.read()
+            return f.read().strip()
       
 @app.route("/")
 def hello():
