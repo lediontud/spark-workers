@@ -1,4 +1,3 @@
-POST https://www.googleapis.com/compute/v1/projects/feisty-tempest-406610/zones/europe-west2-c/instances
 {
   "canIpForward": false,
   "confidentialInstanceConfig": {
