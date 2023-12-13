@@ -12,7 +12,7 @@
       "deviceName": "slave1",
       "initializeParams": {
         "diskSizeGb": "10",
-        "diskType": "projects/feisty-tempest-406610/zones/europe-west2-b/diskTypes/pd-standard",
+        "diskType": "projects/feisty-tempest-406610/zones/europe-west2-c/diskTypes/pd-standard",
         "labels": {},
         "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20231115"
       },
@@ -29,7 +29,7 @@
   "labels": {
     "goog-ec-src": "vm_add-rest"
   },
-  "machineType": "projects/feisty-tempest-406610/zones/europe-west2-b/machineTypes/e2-medium",
+  "machineType": "projects/feisty-tempest-406610/zones/europe-west2-c/machineTypes/e2-medium",
   "metadata": {
     "items": [
       {
@@ -87,5 +87,5 @@
       "https-server"
     ]
   },
-  "zone": "projects/feisty-tempest-406610/zones/europe-west2-b"
+  "zone": "projects/feisty-tempest-406610/zones/europe-west2-c"
 }
