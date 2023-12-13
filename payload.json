@@ -12,9 +12,9 @@
       "deviceName": "slave1",
       "initializeParams": {
         "diskSizeGb": "10",
-        "diskType": "projects/feisty-tempest-406610/zones/europe-west2-c/diskTypes/pd-standard",
+        "diskType": "projects/spark-371009/zones/us-west4-b/diskTypes/pd-balanced",
         "labels": {},
-        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20231115"
+        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221102"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -24,12 +24,9 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
-  "instanceEncryptionKey": {},
-  "keyRevocationActionType": "NONE",
-  "labels": {
-    "goog-ec-src": "vm_add-rest"
-  },
-  "machineType": "projects/feisty-tempest-406610/zones/europe-west2-c/machineTypes/e2-medium",
+  "keyRevocationActionType": "STOP",
+  "labels": {},
+  "machineType": "projects/spark-371009/zones/europe-west1-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
       {
@@ -48,12 +45,9 @@
         }
       ],
       "stackType": "IPV4_ONLY",
-      "subnetwork": "projects/feisty-tempest-406610/regions/europe-west2/subnetworks/default"
+      "subnetwork": "projects/spark-371009/regions/europe-west1/subnetworks/default"
     }
   ],
-  "params": {
-    "resourceManagerTags": {}
-  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
@@ -65,7 +59,7 @@
   },
   "serviceAccounts": [
     {
-      "email": "307392323983-compute@developer.gserviceaccount.com",
+      "email": "569439294570-compute@developer.gserviceaccount.com",
       "scopes": [
         "https://www.googleapis.com/auth/devstorage.read_only",
         "https://www.googleapis.com/auth/logging.write",
@@ -84,5 +78,5 @@
   "tags": {
     "items": []
   },
-  "zone": "projects/feisty-tempest-406610/zones/europe-west2-c"
+  "zone": "projects/spark-371009/zones/europe-west1-b"
 }
