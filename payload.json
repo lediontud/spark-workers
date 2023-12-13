@@ -12,9 +12,9 @@
       "deviceName": "slave1",
       "initializeParams": {
         "diskSizeGb": "10",
-        "diskType": "projects/feisty-tempest-406610/zones/europe-west2-b/diskTypes/pd-balanced",
+        "diskType": "projects/feisty-tempest-406610/zones/europe-west2-b/diskTypes/pd-standard",
         "labels": {},
-        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221102"
+        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20231115"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -24,14 +24,17 @@
     "enableDisplay": false
   },
   "guestAccelerators": [],
-  "keyRevocationActionType": "STOP",
-  "labels": {},
+  "instanceEncryptionKey": {},
+  "keyRevocationActionType": "NONE",
+  "labels": {
+    "goog-ec-src": "vm_add-rest"
+  },
   "machineType": "projects/feisty-tempest-406610/zones/europe-west2-b/machineTypes/e2-medium",
   "metadata": {
     "items": [
       {
         "key": "startup-script",
-        "value": "apt update\ncurl --output spark.tgz https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz\napt -y install default-jdk\ntar -xzvf spark.tgz\n./spark-3.5.0-bin-hadoop3/sbin/start-slave.sh spark://spark-master.europe-west2-c.c.feisty-tempest-406610.internal:7077"
+        "value": "apt update\ncurl --output spark.tgz https://dlcdn.apache.org/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz\napt -y install default-jdk\\ntar -xzvf spark.tgz\n./spark-3.5.0-bin-hadoop3/sbin/start-slave.sh spark://spark-master.europe-west2-c.c.feisty-tempest-406610.internal:7077"
       }
     ]
   },
@@ -48,6 +51,9 @@
       "subnetwork": "projects/feisty-tempest-406610/regions/europe-west2/subnetworks/default"
     }
   ],
+  "params": {
+    "resourceManagerTags": {}
+  },
   "reservationAffinity": {
     "consumeReservationType": "ANY_RESERVATION"
   },
@@ -76,7 +82,10 @@
     "enableVtpm": true
   },
   "tags": {
-    "items": []
+    "items": [
+      "http-server",
+      "https-server"
+    ]
   },
   "zone": "projects/feisty-tempest-406610/zones/europe-west2-b"
 }
